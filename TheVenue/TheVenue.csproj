@@ -1,0 +1,737 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44678A9A-95EC-4F36-A9AF-457EDF4700D8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheVenue</RootNamespace>
+    <AssemblyName>TheVenue</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44341</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Category.aspx" />
+    <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Admin\OrderStatus.aspx" />
+    <Content Include="Admin\Product.aspx" />
+    <Content Include="Admin\ReservationStatus.aspx" />
+    <Content Include="Admin\Users.aspx" />
+    <Content Include="assets\css\animate.css\css\animate.css" />
+    <Content Include="assets\css\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\css\jquery.mCustomScrollbar.css" />
+    <Content Include="assets\css\morris.js\css\morris.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\datatables\css\dataTables.bootstrap4.min.css" />
+    <Content Include="assets\datatables\css\icon-font.min.css" />
+    <Content Include="assets\datatables\css\jquery.dataTables.min.css" />
+    <Content Include="assets\datatables\css\responsive.bootstrap4.min.css" />
+    <Content Include="assets\datatables\css\responsive.dataTables.min.css" />
+    <Content Include="assets\datatables\images\sort_asc.png" />
+    <Content Include="assets\datatables\images\sort_asc_disabled.png" />
+    <Content Include="assets\datatables\images\sort_both.png" />
+    <Content Include="assets\datatables\images\sort_desc.png" />
+    <Content Include="assets\datatables\images\sort_desc_disabled.png" />
+    <Content Include="assets\datatables\js\buttons.bootstrap4.min.js" />
+    <Content Include="assets\datatables\js\buttons.flash.min.js" />
+    <Content Include="assets\datatables\js\buttons.html5.min.js" />
+    <Content Include="assets\datatables\js\buttons.print.min.js" />
+    <Content Include="assets\datatables\js\datatable-setting.js" />
+    <Content Include="assets\datatables\js\dataTables.bootstrap4.min.js" />
+    <Content Include="assets\datatables\js\dataTables.buttons.min.js" />
+    <Content Include="assets\datatables\js\dataTables.responsive.min.js" />
+    <Content Include="assets\datatables\js\jquery.dataTables.min.js" />
+    <Content Include="assets\datatables\js\jszip.min.js" />
+    <Content Include="assets\datatables\js\pdfmake.min.js" />
+    <Content Include="assets\datatables\js\responsive.bootstrap4.min.js" />
+    <Content Include="assets\datatables\js\vfs_fonts.js" />
+    <Content Include="assets\icon\icofont\css\icofont.css" />
+    <Content Include="assets\icon\icofont\fonts\icofont.svg" />
+    <Content Include="assets\icon\themify-icons\fonts\themify.svg" />
+    <Content Include="assets\icon\themify-icons\themify-icons.css" />
+    <Content Include="assets\images\auth\logo-dark.png" />
+    <Content Include="assets\images\auth\Logo-small-bottom.png" />
+    <Content Include="assets\images\auth\logo.png" />
+    <Content Include="assets\images\avatar-1.jpg" />
+    <Content Include="assets\images\avatar-2.jpg" />
+    <Content Include="assets\images\avatar-3.jpg" />
+    <Content Include="assets\images\avatar-4.jpg" />
+    <Content Include="assets\images\bg.jpg" />
+    <Content Include="assets\images\favicon.ico" />
+    <Content Include="assets\images\flags\ENGLISH.jpg" />
+    <Content Include="assets\images\flags\FRANCE.jpg" />
+    <Content Include="assets\images\flags\PORTO.jpg" />
+    <Content Include="assets\images\flags\SPAIN.jpg" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\mega-menu\01.jpg" />
+    <Content Include="assets\images\mega-menu\02.jpg" />
+    <Content Include="assets\images\mega-menu\03.jpg" />
+    <Content Include="assets\images\mega-menu\04.jpg" />
+    <Content Include="assets\images\mega-menu\05.jpg" />
+    <Content Include="assets\images\mega-menu\06.jpg" />
+    <Content Include="assets\images\pattern2.jpg" />
+    <Content Include="assets\images\user.png" />
+    <Content Include="assets\js\bootstrap-growl.min.js" />
+    <Content Include="assets\js\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\js\classie.js" />
+    <Content Include="assets\js\classie\classie.js" />
+    <Content Include="assets\js\common-pages.js" />
+    <Content Include="assets\js\demo-12.js" />
+    <Content Include="Images\Product\8d93eab8bf394f7e50031174d47c0d53.jpg" />
+    <Content Include="Images\Product\americano.jpg" />
+    <Content Include="Images\Product\whitecookie.jpg" />
+    <Content Include="itextsharp.dll" />
+    <Content Include="TemplateFiles\images\bowl.jpg" />
+    <Content Include="TemplateFiles\images\cafe.jpg" />
+    <Content Include="TemplateFiles\images\chef1.jpg" />
+    <Content Include="TemplateFiles\images\chef2.jpg" />
+    <Content Include="TemplateFiles\images\chef3.jpg" />
+    <Content Include="TemplateFiles\images\chef4.jpg" />
+    <Content Include="TemplateFiles\images\chiabowl.jpg" />
+    <Content Include="TemplateFiles\images\dessertss.jpg" />
+    <Content Include="TemplateFiles\images\mainn.jpg" />
+    <Content Include="TemplateFiles\images\pavlova.jpg" />
+    <Content Include="TemplateFiles\images\ricebowl.jpg" />
+    <Content Include="TemplateFiles\images\salad.jpg" />
+    <Content Include="TemplateFiles\images\spicysalad.jpg" />
+    <Content Include="TemplateFiles\images\startes.jpg" />
+    <Content Include="TemplateFiles\images\tatlı.jpg" />
+    <Content Include="TemplateFiles\js\bootstrap.bundle.min.js" />
+    <Content Include="TemplateFiles\js\cus.js" />
+    <Content Include="TemplateFiles\js\filter.js" />
+    <Content Include="assets\js\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="assets\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="assets\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="assets\js\jquery.mousewheel.min.js" />
+    <Content Include="assets\js\jquery\jquery.min.js" />
+    <Content Include="assets\js\modernizr\css-scrollbars.js" />
+    <Content Include="assets\js\modernizr\modernizr.js" />
+    <Content Include="assets\js\morris.js\morris.js" />
+    <Content Include="assets\js\pcoded.min.js" />
+    <Content Include="assets\js\popper.js\popper.min.js" />
+    <Content Include="assets\js\raphael\raphael.min.js" />
+    <Content Include="assets\js\script.js" />
+    <Content Include="assets\js\script.min.js" />
+    <Content Include="assets\js\SmoothScroll.js" />
+    <Content Include="assets\pages\accordion\accordion.js" />
+    <Content Include="assets\pages\accordion\accordion.min.js" />
+    <Content Include="assets\pages\chart\morris\morris-custom-chart.js" />
+    <Content Include="assets\pages\dashboard\amchart\css\amchart.css" />
+    <Content Include="assets\pages\dashboard\amchart\css\export.css" />
+    <Content Include="assets\pages\dashboard\amchart\js\amcharts.js" />
+    <Content Include="assets\pages\dashboard\amchart\js\custom-amchart.js" />
+    <Content Include="assets\pages\dashboard\amchart\js\export.min.js" />
+    <Content Include="assets\pages\dashboard\amchart\js\images\dragIconRoundBig.svg" />
+    <Content Include="assets\pages\dashboard\amchart\js\images\dragIconRoundBigH.svg" />
+    <Content Include="assets\pages\dashboard\amchart\js\light.js" />
+    <Content Include="assets\pages\dashboard\amchart\js\serial.js" />
+    <Content Include="assets\pages\dashboard\custom-dashboard.js" />
+    <Content Include="assets\pages\google-maps\gmaps.min.js" />
+    <Content Include="assets\pages\google-maps\jquery.gmaps.js" />
+    <Content Include="assets\pages\icon-modal.js" />
+    <Content Include="assets\pages\notification\notification.css" />
+    <Content Include="assets\pages\notification\notification.js" />
+    <Content Include="assets\pages\todo\todo.js" />
+    <Content Include="assets\pages\widget\amchart\amcharts.js" />
+    <Content Include="assets\pages\widget\amchart\amcharts.min.js" />
+    <Content Include="assets\pages\widget\amchart\ammap.js" />
+    <Content Include="assets\pages\widget\amchart\ammap.min.js" />
+    <Content Include="assets\pages\widget\amchart\continentsLow.js" />
+    <Content Include="assets\pages\widget\amchart\continentsLow.min.js" />
+    <Content Include="assets\pages\widget\amchart\gauge.js" />
+    <Content Include="assets\pages\widget\amchart\gauge.min.js" />
+    <Content Include="assets\pages\widget\amchart\light.js" />
+    <Content Include="assets\pages\widget\amchart\light.min.js" />
+    <Content Include="assets\pages\widget\amchart\pie.js" />
+    <Content Include="assets\pages\widget\amchart\pie.min.js" />
+    <Content Include="assets\pages\widget\amchart\serial.js" />
+    <Content Include="assets\pages\widget\amchart\serial.min.js" />
+    <Content Include="assets\pages\widget\amchart\worldLow.js" />
+    <Content Include="assets\pages\widget\amchart\worldLow.min.js" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Category\5f18454f2f2914121973102fa0f9692b.jpg" />
+    <Content Include="Images\Category\chocolate-chip-oatmeal-cookies_1122.jpg" />
+    <Content Include="Images\Category\delish-200511-seo-club-sandwich-h-14383-eb-1590780714.jpg" />
+    <Content Include="Images\login.jpg" />
+    <Content Include="Images\No_image.png" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\src\index.js" />
+    <Content Include="Scripts\src\methods\defaults.js" />
+    <Content Include="Scripts\src\methods\destroy.js" />
+    <Content Include="Scripts\src\methods\disableEventListeners.js" />
+    <Content Include="Scripts\src\methods\enableEventListeners.js" />
+    <Content Include="Scripts\src\methods\placements.js" />
+    <Content Include="Scripts\src\methods\update.js" />
+    <Content Include="Scripts\src\modifiers\applyStyle.js" />
+    <Content Include="Scripts\src\modifiers\arrow.js" />
+    <Content Include="Scripts\src\modifiers\computeStyle.js" />
+    <Content Include="Scripts\src\modifiers\flip.js" />
+    <Content Include="Scripts\src\modifiers\hide.js" />
+    <Content Include="Scripts\src\modifiers\index.js" />
+    <Content Include="Scripts\src\modifiers\inner.js" />
+    <Content Include="Scripts\src\modifiers\keepTogether.js" />
+    <Content Include="Scripts\src\modifiers\offset.js" />
+    <Content Include="Scripts\src\modifiers\preventOverflow.js" />
+    <Content Include="Scripts\src\modifiers\shift.js" />
+    <Content Include="Scripts\src\utils\clockwise.js" />
+    <Content Include="Scripts\src\utils\computeAutoPlacement.js" />
+    <Content Include="Scripts\src\utils\debounce.js" />
+    <Content Include="Scripts\src\utils\find.js" />
+    <Content Include="Scripts\src\utils\findCommonOffsetParent.js" />
+    <Content Include="Scripts\src\utils\findIndex.js" />
+    <Content Include="Scripts\src\utils\getBordersSize.js" />
+    <Content Include="Scripts\src\utils\getBoundaries.js" />
+    <Content Include="Scripts\src\utils\getBoundingClientRect.js" />
+    <Content Include="Scripts\src\utils\getClientRect.js" />
+    <Content Include="Scripts\src\utils\getFixedPositionOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetParent.js" />
+    <Content Include="Scripts\src\utils\getOffsetRect.js" />
+    <Content Include="Scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getOppositePlacement.js" />
+    <Content Include="Scripts\src\utils\getOppositeVariation.js" />
+    <Content Include="Scripts\src\utils\getOuterSizes.js" />
+    <Content Include="Scripts\src\utils\getParentNode.js" />
+    <Content Include="Scripts\src\utils\getPopperOffsets.js" />
+    <Content Include="Scripts\src\utils\getReferenceNode.js" />
+    <Content Include="Scripts\src\utils\getReferenceOffsets.js" />
+    <Content Include="Scripts\src\utils\getRoot.js" />
+    <Content Include="Scripts\src\utils\getRoundedOffsets.js" />
+    <Content Include="Scripts\src\utils\getScroll.js" />
+    <Content Include="Scripts\src\utils\getScrollParent.js" />
+    <Content Include="Scripts\src\utils\getStyleComputedProperty.js" />
+    <Content Include="Scripts\src\utils\getSupportedPropertyName.js" />
+    <Content Include="Scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <Content Include="Scripts\src\utils\getWindow.js" />
+    <Content Include="Scripts\src\utils\getWindowSizes.js" />
+    <Content Include="Scripts\src\utils\includeScroll.js" />
+    <Content Include="Scripts\src\utils\index.js" />
+    <Content Include="Scripts\src\utils\isBrowser.js" />
+    <Content Include="Scripts\src\utils\isFixed.js" />
+    <Content Include="Scripts\src\utils\isFunction.js" />
+    <Content Include="Scripts\src\utils\isIE.js" />
+    <Content Include="Scripts\src\utils\isModifierEnabled.js" />
+    <Content Include="Scripts\src\utils\isModifierRequired.js" />
+    <Content Include="Scripts\src\utils\isNumeric.js" />
+    <Content Include="Scripts\src\utils\isOffsetContainer.js" />
+    <Content Include="Scripts\src\utils\removeEventListeners.js" />
+    <Content Include="Scripts\src\utils\runModifiers.js" />
+    <Content Include="Scripts\src\utils\setAttributes.js" />
+    <Content Include="Scripts\src\utils\setStyles.js" />
+    <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="TemplateFiles\images\about.jpg" />
+    <Content Include="TemplateFiles\images\about_intro.jpg" />
+    <Content Include="TemplateFiles\images\blog.jpg" />
+    <Content Include="TemplateFiles\images\blog_1.jpg" />
+    <Content Include="TemplateFiles\images\blog_2.jpg" />
+    <Content Include="TemplateFiles\images\blog_3.jpg" />
+    <Content Include="TemplateFiles\images\blog_4.jpg" />
+    <Content Include="TemplateFiles\images\blog_5.jpg" />
+    <Content Include="TemplateFiles\images\blog_6.jpg" />
+    <Content Include="TemplateFiles\images\chef_1.jpg" />
+    <Content Include="TemplateFiles\images\chef_2.jpg" />
+    <Content Include="TemplateFiles\images\chef_3.jpg" />
+    <Content Include="TemplateFiles\images\chef_4.jpg" />
+    <Content Include="TemplateFiles\images\contact.jpg" />
+    <Content Include="TemplateFiles\images\deserts.jpg" />
+    <Content Include="TemplateFiles\images\elements.jpg" />
+    <Content Include="TemplateFiles\images\home.jpg" />
+    <Content Include="TemplateFiles\images\icon_1.png" />
+    <Content Include="TemplateFiles\images\icon_2.png" />
+    <Content Include="TemplateFiles\images\icon_3.png" />
+    <Content Include="TemplateFiles\images\icon_4.png" />
+    <Content Include="TemplateFiles\images\icon_5.png" />
+    <Content Include="TemplateFiles\images\icon_6.png" />
+    <Content Include="TemplateFiles\images\icon_7.png" />
+    <Content Include="TemplateFiles\images\intro_1.jpg" />
+    <Content Include="TemplateFiles\images\intro_2.jpg" />
+    <Content Include="TemplateFiles\images\main.jpg" />
+    <Content Include="TemplateFiles\images\menu.jpg" />
+    <Content Include="TemplateFiles\images\quote.png" />
+    <Content Include="TemplateFiles\images\reservations.jpg" />
+    <Content Include="TemplateFiles\images\sig.jpg" />
+    <Content Include="TemplateFiles\images\sig_1.jpg" />
+    <Content Include="TemplateFiles\images\sig_2.jpg" />
+    <Content Include="TemplateFiles\images\sig_3.jpg" />
+    <Content Include="TemplateFiles\images\starters.jpg" />
+    <Content Include="TemplateFiles\images\tab.jpg" />
+    <Content Include="TemplateFiles\images\testimonials.jpg" />
+    <Content Include="TemplateFiles\images\video.jpg" />
+    <Content Include="TemplateFiles\js\about.js" />
+    <Content Include="TemplateFiles\js\blog.js" />
+    <Content Include="TemplateFiles\js\contact.js" />
+    <Content Include="TemplateFiles\js\custom.js" />
+    <Content Include="TemplateFiles\js\elements.js" />
+    <Content Include="TemplateFiles\js\jquery-3.2.1.min.js" />
+    <Content Include="TemplateFiles\js\menu.js" />
+    <Content Include="TemplateFiles\js\profile.js" />
+    <Content Include="TemplateFiles\plugins\colorbox\colorbox.css" />
+    <Content Include="TemplateFiles\plugins\colorbox\images\border.png" />
+    <Content Include="TemplateFiles\plugins\colorbox\images\controls.png" />
+    <Content Include="TemplateFiles\plugins\colorbox\images\loading.gif" />
+    <Content Include="TemplateFiles\plugins\colorbox\images\loading_background.png" />
+    <Content Include="TemplateFiles\plugins\colorbox\images\overlay.png" />
+    <Content Include="TemplateFiles\plugins\colorbox\jquery.colorbox-min.js" />
+    <Content Include="TemplateFiles\plugins\easing\easing.js" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="TemplateFiles\plugins\greensock\animation.gsap.min.js" />
+    <Content Include="TemplateFiles\plugins\greensock\ScrollToPlugin.min.js" />
+    <Content Include="TemplateFiles\plugins\greensock\TimelineMax.min.js" />
+    <Content Include="TemplateFiles\plugins\greensock\TweenMax.min.js" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\AUTHORS.txt" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\external\jquery\jquery.js" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\images\ui-icons_444444_256x240.png" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\images\ui-icons_555555_256x240.png" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\images\ui-icons_777620_256x240.png" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\images\ui-icons_777777_256x240.png" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\index.html" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\jquery-ui.css" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\jquery-ui.js" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\jquery-ui.min.css" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\jquery-ui.min.js" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\jquery-ui.structure.css" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\jquery-ui.structure.min.css" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\jquery-ui.theme.css" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\jquery-ui.theme.min.css" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\LICENSE.txt" />
+    <Content Include="TemplateFiles\plugins\jquery-timepicker\jquery.timepicker.css" />
+    <Content Include="TemplateFiles\plugins\jquery-timepicker\jquery.timepicker.js" />
+    <Content Include="TemplateFiles\plugins\OwlCarousel2-2.2.1\ajax-loader.gif" />
+    <Content Include="TemplateFiles\plugins\OwlCarousel2-2.2.1\animate.css" />
+    <Content Include="TemplateFiles\plugins\OwlCarousel2-2.2.1\owl.carousel.css" />
+    <Content Include="TemplateFiles\plugins\OwlCarousel2-2.2.1\owl.carousel.js" />
+    <Content Include="TemplateFiles\plugins\OwlCarousel2-2.2.1\owl.theme.default.css" />
+    <Content Include="TemplateFiles\plugins\OwlCarousel2-2.2.1\owl.video.play.png" />
+    <Content Include="TemplateFiles\plugins\parallax-js-master\parallax.min.js" />
+    <Content Include="TemplateFiles\plugins\progressbar\progressbar.min.js" />
+    <Content Include="TemplateFiles\plugins\scrollmagic\ScrollMagic.min.js" />
+    <Content Include="TemplateFiles\styles\about.css" />
+    <Content Include="TemplateFiles\styles\about_responsive.css" />
+    <Content Include="TemplateFiles\styles\blog.css" />
+    <Content Include="TemplateFiles\styles\blog_responsive.css" />
+    <Content Include="TemplateFiles\styles\contact.css" />
+    <Content Include="TemplateFiles\styles\contact_responsive.css" />
+    <Content Include="TemplateFiles\styles\elements.css" />
+    <Content Include="TemplateFiles\styles\elements_responsive.css" />
+    <Content Include="TemplateFiles\styles\main_styles.css" />
+    <Content Include="TemplateFiles\styles\menu.css" />
+    <Content Include="TemplateFiles\styles\menu_css.css" />
+    <Content Include="TemplateFiles\styles\menu_responsive.css" />
+    <Content Include="TemplateFiles\styles\responsive.css" />
+    <Content Include="User\AboutUs.aspx" />
+    <Content Include="User\Blog.aspx" />
+    <Content Include="User\Cart.aspx" />
+    <Content Include="User\Contact.aspx" />
+    <Content Include="User\contact.html" />
+    <Content Include="User\Default.aspx" />
+    <Content Include="User\Invoice.aspx" />
+    <Content Include="User\Login.aspx" />
+    <Content Include="User\Menu.aspx" />
+    <Content Include="User\MyReservations.aspx" />
+    <Content Include="User\OrderHistory.aspx" />
+    <Content Include="User\Payment.aspx" />
+    <Content Include="User\Profile.aspx" />
+    <Content Include="User\Registration.aspx" />
+    <Content Include="User\Reservation.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderStatus.aspx.cs">
+      <DependentUpon>OrderStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrderStatus.aspx.designer.cs">
+      <DependentUpon>OrderStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ReservationStatus.aspx.cs">
+      <DependentUpon>ReservationStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ReservationStatus.aspx.designer.cs">
+      <DependentUpon>ReservationStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Blog.aspx.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Blog.aspx.designer.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\MyReservations.aspx.cs">
+      <DependentUpon>MyReservations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MyReservations.aspx.designer.cs">
+      <DependentUpon>MyReservations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\OrderHistory.aspx.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\OrderHistory.aspx.designer.cs">
+      <DependentUpon>OrderHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Reservation.aspx.cs">
+      <DependentUpon>Reservation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Reservation.aspx.designer.cs">
+      <DependentUpon>Reservation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TemplateFiles\font\edwardian_script_itc.otf" />
+    <Content Include="TemplateFiles\font\edwardian_script_itc.ttf" />
+    <Content Include="User\User.Master" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\core.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\list.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\path.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="TemplateFiles\plugins\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="TemplateFiles\plugins\jquery-datepicker\package.json" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="assets\icon\icofont\fonts\icofont.eot" />
+    <Content Include="assets\icon\icofont\fonts\icofont.ttf" />
+    <Content Include="assets\icon\icofont\fonts\icofont.woff" />
+    <Content Include="assets\icon\themify-icons\fonts\themify.eot" />
+    <Content Include="assets\icon\themify-icons\fonts\themify.ttf" />
+    <Content Include="assets\icon\themify-icons\fonts\themify.woff" />
+    <Content Include="assets\datatables\fonts\ionicons.ttf" />
+    <Content Include="assets\datatables\fonts\ionicons.woff" />
+    <Content Include="assets\datatables\fonts\themify.ttf" />
+    <Content Include="assets\datatables\fonts\themify.woff" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper.js.flow" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Scripts\index.js.flow" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\User\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60202</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44341/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
