@@ -42,6 +42,7 @@
                                                                         <th>Tam isim</th>
                                                                         <th>Kullanıcı Adı</th>
                                                                         <th>Email</th>
+                                                                        <th>Aktiflik</th>
                                                                         <th>Katılım Tarihi</th>
                                                                         <th class="datatable-nosort">Sil</th>
                                                                     </tr>
@@ -54,6 +55,7 @@
                                                                 <td> <%# Eval("Name") %>  </td>
                                                                 <td> <%# Eval("Username") %>  </td>
                                                                 <td> <%# Eval("Email") %>  </td>
+                                                                <td> <%# Eval("is_active") %>  </td>
                                                                 <td><%# Eval("CreatedDate") %> </td>
                                                                 <td>
                                                                    

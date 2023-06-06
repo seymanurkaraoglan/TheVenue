@@ -21,7 +21,7 @@ namespace TheVenue.Admin
         {
             if (!IsPostBack)
             {
-                Session["breadCrum"] = "Users";
+                Session["breadCrum"] = "Kullanıcılar";
                 if (Session["admin"] == null)
                 {
                     Response.Redirect("../User/Login.aspx");
