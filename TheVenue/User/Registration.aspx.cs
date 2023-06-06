@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net.Mail;
 
 namespace TheVenue.User
 {
@@ -47,6 +48,7 @@ namespace TheVenue.User
             cmd.Parameters.AddWithValue("@Address", txtAddress.Text.Trim());
             cmd.Parameters.AddWithValue("@PostCode", txtPostCode.Text.Trim());
             cmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
+            cmd.Parameters.AddWithValue("@is_active", "Aktif");
             if (fuUserImage.HasFile)
             {
                 if (Utils.IsValidExtension(fuUserImage.FileName))
@@ -78,11 +80,28 @@ namespace TheVenue.User
                     con.Open();
                     cmd.ExecuteNonQuery();
                     actionName = userId == 0 ?
-                        "kayıt başarılı! <b><a href='Login.aspx'> Giriş yapmak için</a></b> tıklayın" :
+                        "kayıt başarılı! <b> Hesabınızı aktive etmek için gelen kutunuzu kontrol ediniz. </b>" :
                         "detaylar başarıyla güncellendi! <b><a href='Profile.aspx'> Buradan kontrol edebilirsiniz</a></b>";
+                    MailMessage mail = new MailMessage();
+                    mail.To.Add(txtEmail.Text.ToString().Trim());
+                    mail.From = new MailAddress(" VenueFoodnCoffee@gmail.com ");
+                    mail.Subject = "Aktivasyon Linki";
+                    mail.Body = "<a href='https://localhost:44341/User/Login.aspx'>  Hesabınızı aktive etmek için buraya tıklayınız.</a>";
+                    mail.IsBodyHtml = true;
+                    SmtpClient smtp = new SmtpClient();
+                    smtp.Port = 587; // 25 465
+                    smtp.EnableSsl = true;
+                    smtp.UseDefaultCredentials = false;
+                    smtp.Host = " smtp.gmail.com ";
+                    smtp.Credentials = new System.Net.NetworkCredential("VenueFoodnCoffee@gmail.com", "owjwugqnoappkluy");
+                    smtp.Send(mail);
+
                     lblMsg.Visible = true;
                     lblMsg.Text = "<b>" + txtUsername.Text.Trim() + "</b> " + actionName;
                     lblMsg.CssClass = "alert alert-success";
+
+                   
+
                     if (userId != 0)
                     {
                         Response.AddHeader("REFRESH", "1;URL=Profile.aspx");
