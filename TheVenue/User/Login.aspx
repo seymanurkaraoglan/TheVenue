@@ -51,15 +51,15 @@
                 <div class="col-md-6">
                     <div class="form_container">
                         <div>
-                            <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="Kullanıcı adı zorunludur" ControlToValidate="txtUsername"
+                            <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="Kullanıcı adı zorunludur" ControlToValidate="txtUsername" ForeColor="Red"
                                  Display="Dynamic" SetFocusOnError="true" Font-Size="Small"></asp:RequiredFieldValidator>
-                            <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Kullanıcı adınız"></asp:TextBox>
+                            <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Kullanıcı adınız" ForeColor="Black"></asp:TextBox>
                         </div>
                         <br />
                         <div>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Şifre zorunludur" ControlToValidate="txtPassword"
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Şifre zorunludur" ControlToValidate="txtPassword" ForeColor="Red"
                                  Display="Dynamic" SetFocusOnError="true" Font-Size="Small"></asp:RequiredFieldValidator>
-                            <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Şifreniz" TextMode="Password"></asp:TextBox>
+                            <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Şifreniz" TextMode="Password" ForeColor="Black"></asp:TextBox>
                         </div>
                        <br>
                         <div class="btn_box">
