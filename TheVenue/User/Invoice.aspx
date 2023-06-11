@@ -61,9 +61,9 @@
                     <td><%# Eval("Srno") %></td>
                     <td><%# Eval("OrderNo") %></td>
                     <td><%# Eval("Name") %></td>
-                    <td><%# string.IsNullOrEmpty( Eval("Price").ToString() ) ? "" : "₺" + Eval("Price") %></td>
+                    <td><%# string.IsNullOrEmpty( Eval("Price").ToString() ) ? "" : "" + Eval("Price") %> TL</td>
                     <td><%# Eval("Quantity") %></td>
-                    <td>₺<%# Eval("TotalPrice") %></td>
+                    <td><%# Eval("TotalPrice") %> TL</td>
                 </tr>
             </ItemTemplate>
             <FooterTemplate>

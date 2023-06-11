@@ -105,13 +105,14 @@
                             </div>
                             <div class="rating_r sig_rating rating_r_5"><i></i><i></i><i></i><i></i><i></i></div>
                             <div class="sig_name_container d-flex flex-row align-items-start justify-content-start">
-                                <div class="sig_name">Strawberry Pavlova</div>
-                                <div class="sig_price ml-auto">₺70</div>
+                                <div class="sig_name">Pavlova</div>
+                                &nbsp;
+                                <div class="sig_price ml-auto">70TL</div>
                             </div>
                             <div class="sig_content_list">
                                 <ul class="d-flex flex-row align-items-center justify-content-start">
-                                    <li>Desserts</li>
-                                    <li>Strawberry</li>
+                                    <li>Tatlılar</li>
+                                    <li>Çilek</li>
                                 </ul>
                             </div>
                             <%-- onitemcommand ekleyip dbye insert edip sayfa carta yönlendirilmeli. --%>
@@ -141,9 +142,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 offset-lg-2">
-                <div class="sig_content" style="width:850px;">
+                <div class="sig_content" style="width: 850px;">
                     <%-- Kategoriler arasına boşluk eklenecek --%>
-                    <asp:DataList ID="rCategory" runat="server" RepeatDirection="Vertical" RepeatColumns ="3" CellPadding="5" CellSpacing="10">
+                    <asp:DataList ID="rCategory" runat="server" RepeatDirection="Vertical" RepeatColumns="3" CellPadding="5" CellSpacing="10">
                         <ItemTemplate>
                             <div class="col-5">
                                 <div class="img-box">

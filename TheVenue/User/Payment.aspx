@@ -113,7 +113,7 @@
                                                 ErrorMessage="İsim mutlaka karakter olmalıdır" ForeColor="Red" Display="Dynamic" SetFocusOnError="true"
                                                 ValidationExpression="^[a-zA-Z\s]+$" ControlToValidate="txtName" ValidationGroup="card">*
                                             </asp:RegularExpressionValidator>
-                                            <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Kart Sahibinin İsmi"></asp:TextBox>
+                                            <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Kart Sahibinin İsmi" ForeColor="Black"></asp:TextBox>
                                         </div>
                                         <div class="form-group">
                                             <label for="txtCardNo">
@@ -127,7 +127,7 @@
                                                 ValidationExpression="[0-9]{16}" ControlToValidate="txtCardNo" ValidationGroup="card">*
                                             </asp:RegularExpressionValidator>
                                             <div class="input-group">
-                                                <asp:TextBox ID="txtCardNo" runat="server" CssClass="form-control" placeholder="Geçerli kart numarası"
+                                                <asp:TextBox ID="txtCardNo" runat="server" CssClass="form-control" placeholder="Geçerli kart numarası" ForeColor="Black"
                                                     TextMode="Number"></asp:TextBox>
                                                 <div class="input-group-append">
                                                     <span class="input-group-text text-muted">
@@ -161,9 +161,9 @@
                                                         ValidationExpression="[0-9]{4}" ControlToValidate="txtExpYear" ValidationGroup="card">*
                                                     </asp:RegularExpressionValidator>
                                                     <div class="input-group">
-                                                        <asp:TextBox ID="txtExpMonth" runat="server" CssClass="form-control" placeholder="MM"
+                                                        <asp:TextBox ID="txtExpMonth" runat="server" CssClass="form-control" placeholder="MM" ForeColor="Black"
                                                             TextMode="Number"></asp:TextBox>
-                                                        <asp:TextBox ID="txtExpYear" runat="server" CssClass="form-control" placeholder="YYYY"
+                                                        <asp:TextBox ID="txtExpYear" runat="server" CssClass="form-control" placeholder="YYYY" ForeColor="Black"
                                                             TextMode="Number"></asp:TextBox>
                                                     </div>
                                                 </div>
@@ -180,7 +180,7 @@
                                                         ErrorMessage="CVV no. 3 rakam olmalı" ForeColor="Red" SetFocusOnError="true"
                                                         ValidationExpression="[0-9]{3}" ControlToValidate="txtCvv" ValidationGroup="card">*
                                                     </asp:RegularExpressionValidator>
-                                                    <asp:TextBox ID="txtCvv" runat="server" CssClass="form-control" placeholder="CVV No."
+                                                    <asp:TextBox ID="txtCvv" runat="server" CssClass="form-control" placeholder="CVV No." ForeColor="Black"
                                                         TextMode="Number"></asp:TextBox>
                                                 </div>
                                             </div>
@@ -192,7 +192,7 @@
                                             <asp:RequiredFieldValidator ID="rfvAddress" runat="server" ErrorMessage="Adres gerekli" ForeColor="Red"
                                                 ControlToValidate="txtAddress" Display="Dynamic" SetFocusOnError="true" ValidationGroup="card">*
                                             </asp:RequiredFieldValidator>
-                                            <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" placeholder="Teslimat adresi"
+                                            <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" placeholder="Teslimat adresi" ForeColor="Black"
                                                 TextMode="MultiLine" ValidationGroup="card"></asp:TextBox>
                                         </div>
                                         <div class="card-footer">
@@ -209,7 +209,7 @@
                                         <label for="txtCODAddress">
                                             <h6>Teslimat Adresi</h6>
                                         </label>
-                                        <asp:TextBox ID="txtCODAddress" runat="server" CssClass="form-control" placeholder="Teslimat Adresi"
+                                        <asp:TextBox ID="txtCODAddress" runat="server" CssClass="form-control" placeholder="Teslimat Adresi" ForeColor="Black"
                                             TextMode="MultiLine"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rfvCODAddress" runat="server" ErrorMessage="Adres gerekli" ForeColor="Red"
                                             ControlToValidate="txtCODAddress" Display="Dynamic" SetFocusOnError="true" ValidationGroup="cod"
@@ -230,7 +230,7 @@
                             <!-- End -->
                         </div>
                         <div class="card-footer">
-                            <b class="badge badge-success badge-pill shadow-sm">Sipariş Tutarı: ₺ <% Response.Write(Session["grandTotalPrice"]); %> </b>
+                            <b class="badge badge-success badge-pill shadow-sm">Sipariş Tutarı: <% Response.Write(Session["grandTotalPrice"]); %>  TL</b>
                             <div class="pt-1">
                                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ValidationGroup="card"
                                     HeaderText="Fix the following errors" Font-Names="Segoe Script" />

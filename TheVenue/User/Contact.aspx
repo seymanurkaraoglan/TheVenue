@@ -114,7 +114,7 @@
 									</div>
 								</div>
 							</div>--%>
-                        <div class="google-map" style="left: 5px;width:800px;">
+                        <div class="google-map" style="left: 5px;width:1000px;">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.212280250873!2d2.330415915056694!3d48.85416230895944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d781fb9dab%3A0x18bba6dd45e173ff!2sCaf%C3%A9%20de%20Flore!5e0!3m2!1str!2str!4v1675964548595!5m2!1str!2str" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
 

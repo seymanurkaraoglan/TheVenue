@@ -194,7 +194,7 @@
                                                                     </asp:LinkButton>
                                                                     <asp:LinkButton ID="lnkDelete" Text="Delete" runat="server" CommandName="delete"
                                                                         CssClass="badge bg-danger" CommandArgument='<%# Eval("ProductId") %>'
-                                                                        OnClientClick="return confirm('Do you want to delete this product?');"
+                                                                        OnClientClick="return confirm('Bu ürünü silmek istediğinize emin misiniz?');"
                                                                         CausesValidation="false">
                                                                             <i class="ti-trash"></i>
                                                                     </asp:LinkButton>

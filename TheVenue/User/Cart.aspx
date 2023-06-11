@@ -34,7 +34,7 @@
                 <div class="align-self-end">
                     <asp:Label ID="lblMsg" runat="server" Visible="true"></asp:Label>
                 </div>
-                <h2 style="font-family:'Brush Script MT';font-size:60px;">Alışveris Sepetin
+                <h2 style="font-family:'Brush Script MT';font-size:60px;">Alısveris Sepetin
                 </h2>
             </div>
         </div>
@@ -97,7 +97,7 @@
                         <td class="pl-lg-5">
                             <b>Grand Total:- </b>
                         </td>
-                        <td> ₺ <% Response.Write(Session["grandTotalPrice"]); %></td>
+                        <td> <% Response.Write(Session["grandTotalPrice"]); %> TL</td>
                         <td></td>
                     </tr>
                     <tr>
