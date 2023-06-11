@@ -87,7 +87,7 @@
                         <div>
                             
                             <asp:RequiredFieldValidator ID="rfvName" runat="server" ErrorMessage="İsim zorunlu" ControlToValidate="txtName"
-                                ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                 Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="revName" runat="server" ErrorMessage="Ad yalnızca karakter olmalıdır"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[a-zA-Z\s]+$"
                                 ControlToValidate="txtName"></asp:RegularExpressionValidator>
@@ -100,7 +100,7 @@
 						 <div>
                             
                             <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="Kullanıcı Adı zorunlu" ControlToValidate="txtUsername"
-                                ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                 Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                              <asp:TextBox  ID="txtUsername" runat="server" CssClass="form-control" placeholder="Kullanıcı adı" 
                                 Tooltip="Username" ></asp:TextBox>
                            
@@ -108,14 +108,14 @@
 						<br />
 						<div>
                             <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="Email zorunlu" ControlToValidate="txtEmail"
-                                ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                 Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Mail Adresi"
                                 Tooltip="Email" TextMode="Email"></asp:TextBox>
                         </div>
 						<br />
 						<div>
                             <asp:RequiredFieldValidator ID="rfvMobile" runat="server" ErrorMessage="Telefon No. zorunlu" ControlToValidate="txtMobile"
-                                ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                 Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="revMobile" runat="server" ErrorMessage="Telefon numarası yalnızca 10 rakam olmalıdır"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[0-9]{10}$"
                                 ControlToValidate="txtMobile"></asp:RegularExpressionValidator>
@@ -131,7 +131,7 @@
 
                         <div>
                             <asp:RequiredFieldValidator ID="rfvAddress" runat="server" ErrorMessage="Adres zorunlu" ControlToValidate="txtAddress"
-                                ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                 Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                            <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" placeholder="Adres"
                                 Tooltip="Address" TextMode="MultiLine"></asp:TextBox>
                         </div>
@@ -140,7 +140,7 @@
 
 						 <div>
                             <asp:RequiredFieldValidator ID="rfvPostCode" runat="server" ErrorMessage="Post/Zip Kod zorunlu" ControlToValidate="txtPostCode"
-                                ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                 Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                              <asp:RegularExpressionValidator ID="revPostCode" runat="server" ErrorMessage="Post/Zip kod mutlaka 6 rakam olmalıdır"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[0-9]{6}$"
                                 ControlToValidate="txtPostCode"></asp:RegularExpressionValidator>
@@ -154,7 +154,7 @@
 						<br />
 						<div>
                             <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage="Şifre zorunlu" ControlToValidate="txtPassword"
-                                ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                                 Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Şifre"
                                 Tooltip="Password" TextMode="Password"></asp:TextBox>
                         </div>

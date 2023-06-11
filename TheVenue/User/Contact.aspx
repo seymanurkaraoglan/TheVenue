@@ -67,7 +67,7 @@
                             <ul class="contact_list">
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>
-                                        <div>Address</div>
+                                        <div>Adres</div>
                                     </div>
                                     <div>1481 Lale Sokak , Kadıköy No 5-A </div>
                                 </li>
@@ -81,7 +81,7 @@
                                     <div>
                                         <div>E-mail</div>
                                     </div>
-                                    <div>mailiniz@gmail.com</div>
+                                    <div>thevenuefoodncoffee@gmail.com</div>
                                 </li>
                             </ul>
                             <div class="contact_social">

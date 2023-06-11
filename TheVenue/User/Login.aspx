@@ -52,13 +52,13 @@
                     <div class="form_container">
                         <div>
                             <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="Kullanıcı adı zorunludur" ControlToValidate="txtUsername"
-                                ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Font-Size="Small"></asp:RequiredFieldValidator>
+                                 Display="Dynamic" SetFocusOnError="true" Font-Size="Small"></asp:RequiredFieldValidator>
                             <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Kullanıcı adınız"></asp:TextBox>
                         </div>
                         <br />
                         <div>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Şifre zorunludur" ControlToValidate="txtPassword"
-                                ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Font-Size="Small"></asp:RequiredFieldValidator>
+                                 Display="Dynamic" SetFocusOnError="true" Font-Size="Small"></asp:RequiredFieldValidator>
                             <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Şifreniz" TextMode="Password"></asp:TextBox>
                         </div>
                        <br>
