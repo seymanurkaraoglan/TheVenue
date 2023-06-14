@@ -82,6 +82,7 @@ namespace TheVenue.User
                     actionName = userId == 0 ?
                         "kayıt başarılı! <b> Hesabınızı aktive etmek için gelen kutunuzu kontrol ediniz. </b>" :
                         "detaylar başarıyla güncellendi! <b><a href='Profile.aspx'> Buradan kontrol edebilirsiniz</a></b>";
+
                     MailMessage mail = new MailMessage();
                     mail.To.Add(txtEmail.Text.ToString().Trim());
                     mail.From = new MailAddress(" VenueFoodnCoffee@gmail.com ");

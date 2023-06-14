@@ -58,7 +58,7 @@ namespace TheVenue.User
                     con.Open();
                     cmd.ExecuteNonQuery();
                     
-                        lblMsg.Text = "Rezervasyon başarıyla tamamlandı! <b><a href='Profile.aspx'>Rezervasyonları görüntülemek için</a></b> tıklayınız";
+                        lblMsg.Text = "Rezervasyon başarıyla tamamlandı! <b><a href='MyReservations.aspx'>Rezervasyonları görüntülemek için</a></b> tıklayınız";
                     
                     lblMsg.Visible = true;
                     lblMsg.CssClass = "alert alert-success";

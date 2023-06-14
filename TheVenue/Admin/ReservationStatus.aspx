@@ -85,7 +85,7 @@
                                                 <h4 class="sub-title">Durumu Güncelle</h4>
                                                 <div>
                                                     <div class="form-group">
-                                                        <label>Sipariş Durumu</label>
+                                                        <label>Rezervasyon Durumu</label>
                                                         <div>
                                                             <asp:DropDownList ID="ddlReservationStatus" runat="server" CssClass="form-control">
                                                                 <asp:ListItem Value="0">Durum Seç</asp:ListItem>
@@ -93,7 +93,7 @@
                                                                 <asp:ListItem>Pasif</asp:ListItem>
                                                             </asp:DropDownList>
                                                             <asp:RequiredFieldValidator ID="rfvDdlReservationStatus" runat="server" ForeColor="Red" ControlToValidate="ddlReservationStatus"
-                                                                ErrorMessage="Sipariş durumu zorunludur" SetFocusOnError="true" Display="Dynamic" InitialValue="0">
+                                                                ErrorMessage="Rezervasyon durumu zorunludur" SetFocusOnError="true" Display="Dynamic" InitialValue="0">
                                                             </asp:RequiredFieldValidator>
                                                             <asp:HiddenField ID="hdnId" runat="server" Value="0"></asp:HiddenField>
                                                         </div>

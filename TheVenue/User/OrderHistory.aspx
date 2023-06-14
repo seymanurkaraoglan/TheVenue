@@ -102,7 +102,7 @@
 
                                         <li class="nav-item">
                                             <a class="nav-link active text-info" id="connectedServices-tab" data-toggle="tab" href="OrderHistory.aspx" role="tab"
-                                                aria-controls="connectedServices" aria-selected="false"><i class="fa fa-clock-o mr-2"></i>Sipariş Geçmişi</a>
+                                                aria-controls="connectedServices" aria-selected="false"><i class="fa fa-clock-o mr-2"></i>Siparis Geçmisi</a>
                                         </li>
 
                                          <li class="nav-item">
@@ -116,7 +116,7 @@
                                         <%--Order History Starts--%>
                                         <br />
                                         <br />
-                                        <h6 style="font-size: 40px; font-family: 'Edwardian Script ITC'; color: #774936">Sipariş Geçmişi</h6>
+                                        <h6 style="font-size: 40px; font-family: 'Edwardian Script ITC'; color: #774936">Siparis Geçmisi</h6>
                                         <br />
                                         <div class="tab-pane fade show active" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab">
 
